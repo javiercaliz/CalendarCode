@@ -111,7 +111,7 @@ export function feriados(fecha) {
 
 }
 
-function diaDeCursado(fecha) {
+export function diaDeCursado(fecha) {
     var aux = new Date();
     aux = fecha;
     if (aux.getDay() == 0 || aux.getDay() == 6 || aux.getDay() == 5) {
@@ -121,7 +121,7 @@ function diaDeCursado(fecha) {
     }
 }
 
-function calcular(inicio) {
+export function calcular(inicio) {
 
     var finCurso = new Date();
     finCurso = inicio;
@@ -142,7 +142,7 @@ function calcular(inicio) {
 
 }
 
-function crearFila(tabla, clases, fecha, contenido) {
+export function crearFila(tabla, clases, fecha, contenido) {
     var dia = fecha.getDate();
     var mes = fecha.getMonth()+1;
     var anio = fecha.getFullYear();
@@ -159,7 +159,7 @@ function crearFila(tabla, clases, fecha, contenido) {
     celda3.innerHTML = contenido;
 }
 
-function crearTabla() {
+export function crearTabla() {
 
     let table = document.createElement('table')
     let thead = document.createElement('thead')
@@ -185,7 +185,7 @@ function crearTabla() {
 
 }
 
-function informe(clases, fecha) {
+export function informe(clases, fecha) {
 
     var tabla = document.getElementById("eventos");
     switch (clases) {
@@ -279,7 +279,7 @@ function informe(clases, fecha) {
 
 }
 
-function informeResumido(clases, fecha) {
+export function informeResumido(clases, fecha) {
     if (clases == 165) {
      document.getElementById("informeResumido").textContent = `Tu fecha de Exámen Final es el ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()}`;
     }
