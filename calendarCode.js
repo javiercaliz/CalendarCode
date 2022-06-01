@@ -1,5 +1,5 @@
 //https://cdn.jsdelivr.net/gh/javiercaliz/CalendarCode/calendarCode.js
-function ingresarFecha() {
+export function ingresarFecha() {
     let inicio = new Date();
     //se toma la fecha del front y se corrige 1 día
     inicio = document.getElementById('fechaIngreso').valueAsDate;
