@@ -1,4 +1,4 @@
-function ingresarFecha() {
+export function ingresarFecha() {
     let inicio = new Date();
     //se toma la fecha del front y se corrige 1 día
     inicio = document.getElementById('fechaIngreso').valueAsDate;
@@ -11,7 +11,7 @@ function ingresarFecha() {
     calcular(inicio);
 }
 
-function vacaciones(fecha) {
+export function vacaciones(fecha) {
 
     //lista donde se van a guardar los días de vacaciones
     var vacaciones = [];
