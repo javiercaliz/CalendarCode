@@ -57,7 +57,7 @@ export function vacaciones(fecha) {
 
 }
 
-function feriados(fecha) {
+export function feriados(fecha) {
     //conjunto de feriados
     var feriados = [];
     var validacion = true;
