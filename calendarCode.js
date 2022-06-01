@@ -1,5 +1,5 @@
 //https://cdn.jsdelivr.net/gh/javiercaliz/CalendarCode/calendarCode.js
-export function ingresarFecha() {
+function ingresarFecha() {
     let inicio = new Date();
     //se toma la fecha del front y se corrige 1 día
     inicio = document.getElementById('fechaIngreso').valueAsDate;
@@ -12,7 +12,7 @@ export function ingresarFecha() {
     calcular(inicio);
 }
 
-export function vacaciones(fecha) {
+function vacaciones(fecha) {
 
     //lista donde se van a guardar los días de vacaciones
     var vacaciones = [];
@@ -58,7 +58,7 @@ export function vacaciones(fecha) {
 
 }
 
-export function feriados(fecha) {
+function feriados(fecha) {
     //conjunto de feriados
     var feriados = [];
     var validacion = true;
@@ -111,7 +111,7 @@ export function feriados(fecha) {
 
 }
 
-export function diaDeCursado(fecha) {
+function diaDeCursado(fecha) {
     var aux = new Date();
     aux = fecha;
     if (aux.getDay() == 0 || aux.getDay() == 6 || aux.getDay() == 5) {
@@ -121,7 +121,7 @@ export function diaDeCursado(fecha) {
     }
 }
 
-export function calcular(inicio) {
+function calcular(inicio) {
 
     var finCurso = new Date();
     finCurso = inicio;
@@ -142,7 +142,7 @@ export function calcular(inicio) {
 
 }
 
-export function crearFila(tabla, clases, fecha, contenido) {
+function crearFila(tabla, clases, fecha, contenido) {
     var dia = fecha.getDate();
     var mes = fecha.getMonth()+1;
     var anio = fecha.getFullYear();
@@ -159,7 +159,7 @@ export function crearFila(tabla, clases, fecha, contenido) {
     celda3.innerHTML = contenido;
 }
 
-export function crearTabla() {
+function crearTabla() {
 
     let table = document.createElement('table')
     let thead = document.createElement('thead')
@@ -185,7 +185,7 @@ export function crearTabla() {
 
 }
 
-export function informe(clases, fecha) {
+function informe(clases, fecha) {
 
     var tabla = document.getElementById("eventos");
     switch (clases) {
@@ -279,7 +279,7 @@ export function informe(clases, fecha) {
 
 }
 
-export function informeResumido(clases, fecha) {
+function informeResumido(clases, fecha) {
     if (clases == 165) {
      document.getElementById("informeResumido").textContent = `Tu fecha de Exámen Final es el ${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()}`;
     }
