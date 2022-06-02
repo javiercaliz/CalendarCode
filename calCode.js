@@ -12,7 +12,7 @@ function ingresarFecha() {
     calcular(inicio);
 }
 
-function saludar(){alert('Hola');}
+export function saludar(){alert('Hola');}
 
 function vacaciones(fecha) {
 
