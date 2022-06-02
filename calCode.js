@@ -12,6 +12,8 @@ function ingresarFecha() {
     calcular(inicio);
 }
 
+function saludar(){alert('Hola')};
+
 function vacaciones(fecha) {
 
     //lista donde se van a guardar los días de vacaciones
