@@ -10,6 +10,9 @@ function ingresarFecha() {
     if (document.getElementById("informe") != null) {
         crearTabla();
     }
+    if (document.getElementById("informeClient") != null) {
+        crearTabla();
+    }
     calcular(inicio);
 }
 
@@ -135,6 +138,23 @@ function crearFila(tabla, clases, fecha, contenido) {
     celda3.innerHTML = contenido;
 }
 
+function crearFilaClientVersion(tabla, clases, fecha, contenido, restPerfil, restActividad) {
+    var dia = fecha.getDate();
+    var mes = fecha.getMonth()+1;
+    var anio = fecha.getFullYear();
+    var row = tabla.insertRow(-1);
+    var celda1 = row.insertCell(0);
+    var celda2 = row.insertCell(1);
+    var celda3 = row.insertCell(2);
+    var celda4 = row.insertCell(3);
+    var celda5 = row.insertCell(4);
+    celda1.innerHTML = clases;
+    celda2.innerHTML = dia + '/' + mes + '/' + anio;
+    celda3.innerHTML = contenido;
+    celda4.innerHTML = restPerfil;
+    celda5.innerHTML = restActividad;
+}
+
 function crearTabla() {
 
     let table = document.createElement('table')
@@ -145,10 +165,42 @@ function crearTabla() {
     let th2 = document.createElement('th')
     let th3 = document.createElement('th')
 
-    document.getElementById('informe').appendChild(table);
-    table.append(thead);
+    if (document.getElementById('informeClient') != null) {
+        document.getElementById('informeClient').appendChild(table);
+        let th4 = document.createElement('th')
+    let th5 = document.createElement('th')
+        table.append(thead);
+        table.append(tbody);
+        thead.append(tr);
+        tr.setAttribute('id','table-header');
+        tr.append(th1);
+        tr.append(th2);
+        tr.append(th3);
+        tr.append(th4);
+        tr.append(th5);
+        th1.appendChild(document.createTextNode('Día'));
+        th2.appendChild(document.createTextNode('Fecha'));
+        th3.appendChild(document.createTextNode('Contenido'));
+        th4.appendChild(document.createTextNode('Restricción de Perfil'));
+        th5.appendChild(document.createTextNode('Restricción por Actividad'));
+        table.className = 'table table-bordered tableCalc';
+        th1.style.backgroundColor = '#ffcb00';
+        th2.style.backgroundColor = '#ffcb00';
+        th3.style.backgroundColor = '#ffcb00';
+        th4.style.backgroundColor = '#ffcb00';
+        th5.style.backgroundColor = '#ffcb00';
+        th1.scope = 'col';
+        th2.scope = 'col';
+        th3.scope = 'col';
+        th4.scope = 'col';
+        th5.scope = 'col';
+        table.id = 'eventos';
+    }else{
+        document.getElementById('informe').appendChild(table);
+        table.append(thead);
     table.append(tbody);
     thead.append(tr);
+    tr.setAttribute('id','table-header');
     tr.append(th1);
     tr.append(th2);
     tr.append(th3);
@@ -163,5 +215,8 @@ function crearTabla() {
     th2.scope = 'col';
     th3.scope = 'col';
     table.id = 'eventos';
+    }
+    
+    
    
 }
