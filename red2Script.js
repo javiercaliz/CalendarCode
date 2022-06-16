@@ -5,7 +5,7 @@ function calcular(inicio) {
 
     var clases = 1;
 
-    while (clases < 160) {
+    while (clases < 161) {
         if (diaDeCursado(finCurso)) {
             if (feriados(finCurso)) {
                 if (vacaciones(finCurso)) {
@@ -86,25 +86,25 @@ function informe(clases, fecha) {
       case 117:
         crearFila(tabla, clases, fecha, "Repaso HTML y CSS");
         break;
-      case 125:
+      case 126:
         crearFila(tabla, clases, fecha, "Repaso JavaScript");
         break;
-      case 134:
+      case 135:
         crearFila(tabla, clases, fecha, "Repaso 1 de Spring");
         break;
-      case 140:
+      case 141:
         crearFila(tabla, clases, fecha, "Repaso 2 de Spring");
         break;
-      case 146:
+      case 147:
         crearFila(tabla, clases, fecha, "Repaso 3 de Spring");
         break;
-      case 157:
+      case 158:
         crearFila(tabla, clases, fecha, "Repaso React");
         break;
-      case 158:
+      case 159:
         crearFila(tabla, clases, fecha, "Repaso de Curso");
         break;
-      case 159:
+      case 160:
         crearFila(tabla, clases, fecha, "Integrador Final");
         break;
       default:
@@ -113,7 +113,7 @@ function informe(clases, fecha) {
 }
 
 function informeResumido(clases, fecha) {
-    if (clases == 159) {
+    if (clases == 160) {
      document.getElementById("informeResumido").textContent = `Tu fecha de Exámen Final es el: `;
      document.getElementById("dateFinal").textContent = `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()}`;
      document.getElementById("informeResumido").style.padding = "15px 0px 7px 0px"
