@@ -1,0 +1,193 @@
+
+@font-face {
+  font-family: Eina01Bold;
+  src: url(fonts/Eina01-Bold.ttf);
+}
+
+@font-face {
+  font-family: Eina01SemiBold;
+  src: url(fonts/Eina01-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Eina01Light;
+  src: url(fonts/Eina01-Light.ttf);
+}
+
+@font-face {
+  font-family: Eina01Regular;
+  src: url(fonts/Eina01-Regular.ttf);
+}
+
+.header{
+
+  padding-top: 35px;
+
+}
+
+.center{
+
+text-align: center;
+
+}
+
+.card{
+
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+
+}
+
+.prueba{
+
+  background-color: #F0F1F4;
+  padding: 40px;
+
+}
+
+.navbar{
+
+  /*box-shadow: 0 0 4px .142rem rgba(0,0,0,.25);*/
+
+  height: 80px;
+  border-bottom: 1px solid #f6f6f6;
+  background-color: #F0F1F4;
+  z-index: 4000;
+
+}
+
+.lista{
+
+  max-width: fit-content;
+  
+  margin: auto;
+  padding: 20px 10%;
+  text-align: left;
+  border: 0;
+  font-family: Eina01Regular, sans-serif;
+  color: #37474f;
+  font-size: 16px;
+
+}
+
+.imagen{
+
+  padding-top: 30px;
+  text-align: center;
+  
+}
+
+h2{
+
+  font-size: 45px;
+  font-weight: 700;
+  color: #37474f;
+  font-family: Eina01Bold, sans-serif;
+}
+
+h3{
+
+  color: #37474f;
+  font-family: Eina01Bold, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.h3Light{
+
+  color: #AEAFB1;
+  font-weight: 700;
+  font-family: Eina01Bold, sans-serif;
+  font-size: 22px;
+  
+  
+  }
+
+h4{
+  color: #37474f;
+  font-size: 26px;
+  font-weight: normal;
+  font-family: Eina01Regular, sans-serif;
+}
+
+.gris{
+
+background-color: #F0F1F4;
+
+}
+
+.tableCalc{
+
+color: #37474f;
+text-align: center;
+width: 80%;
+border-color: #DEDDDC;
+border-collapse: collapse;
+
+}
+
+th{
+
+font-family: Eina01SemiBold;
+
+}
+
+tr{
+
+font-family: Eina01Regular;
+
+}
+
+tr:nth-child(even) {
+  background-color: #F0F1F4;;
+}
+
+button.btn-moodle{
+ padding: 14px;
+ width: 25%;
+ height: 20%;
+ font-size: 16px;
+ font-weight: bold;
+ color: #37474f;
+ background-color:#FFCD00;
+ border-color: #FFCD00;
+ border-radius: 6px;
+ font-family: Eina01SemiBold;
+ }
+ 
+button.btn-moodle:hover{
+  color: #37474f;
+  background-color: #FFE377;
+  border-color: #FFE377;
+}
+
+ button.btn-moodle:active{
+  color: #37474f;
+  background-color: #FFB800;
+  border-color: #FFB800;
+ }
+ 
+.textoFinal{
+
+  color: white;
+  font-family: Eina01Regular, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  background-color: #37474f;
+  width: 40%;
+  
+}
+
+.fechaFinal{
+
+  color: #FFCD00;
+  font-family: Eina01Bold, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  background-color: #37474f;
+  width: 40%;
+
+}
+
+.shadow-4{box-shadow:0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15)}.shadow-5{box-shadow:0 1px 1px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.12),0 8px 8px rgba(0,0,0,0.12),0 16px 16px rgba(0,0,0,0.12)}.shadow-6{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11)}.shadow-sharp{box-shadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05)}.shadow-diffuse{box-shadow:0 1px 1px rgba(0,0,0,0.08),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.16),0 8px 8px rgba(0,0,0,0.2)}.shadow-dreamy{box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)}.shadow-shorter{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11)}.shadow-longer{box-shadow:0 2px 1px rgba(0,0,0,0.09),0 4px 2px rgba(0,0,0,0.09),0 8px 4px rgba(0,0,0,0.09),0 16px 8px rgba(0,0,0,0.09),0 32px 16px rgba(0,0,0,0.09)}
