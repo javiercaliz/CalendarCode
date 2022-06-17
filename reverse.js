@@ -3,7 +3,7 @@ function ingresarFecha() {
     //se toma la fecha del front y se corrige 1 día
     fechaActual = document.getElementById('fechaActual').valueAsDate;
     cantidadClases = 
-    fechaActual.setDate(fechaActual.getDate());
+    fechaActual.setDate(fechaActual.getDate()+1);
     calcular(fechaActual);
 }
 
