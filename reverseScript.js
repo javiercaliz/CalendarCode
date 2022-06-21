@@ -2,7 +2,7 @@ function ingresarFecha() {
     let fechaActual = new Date();
     //se toma la fecha del front y se corrige 1 día
     fechaActual = document.getElementById('fechaActual').valueAsDate;
-    cantidadClases = 
+    cantidadClases = document.getElementById('cantidadClases').value;
     fechaActual.setDate(fechaActual.getDate()+1);
     calcular(fechaActual);
 }
@@ -144,5 +144,13 @@ function diaDeCursado(fecha) {
         return false;
     } else {
         return true;
+    }
+}
+
+function showCustom() {
+    if (document.getElementById('customCheck').checked) {
+        document.getElementById('customQuantity').style.display = 'block';
+    }else{
+        document.getElementById('customQuantity').style.display = 'none';
     }
 }
