@@ -4,16 +4,19 @@ function calcular(inicio) {
 
   var clases = 1;
 
+  document.getElementById("estado").textContent = "";
+
   while (clases < 28) {
     if (diaDeCursado(finCurso)) {
       if (feriados(finCurso)) {
         if (vacaciones(finCurso)) {
-          if (document.getElementById("informe") != null) {
+          if (document.getElementById("informeResumido") != null) {
             informe(clases, finCurso);
+            informeResumido(clases, finCurso);
           } else if (document.getElementById("informeClient") != null) {
             informeClient(clases, finCurso);
           } else {
-            informeResumido(clases, finCurso);
+            informe(clases, finCurso);
           }
           clases++;
         }
@@ -29,17 +32,20 @@ function informe(clases, fecha) {
     case 1:
       crearFila(tabla, clases, fecha, "OnBoarding");
       break;
-    case 3:
-      crearFila(tabla, clases, fecha, "Repaso Guía 1");
+    case 2:
+      crearFila(tabla, clases, fecha, "Inicio Guía 1");
       break;
-    case 11:
-      crearFila(tabla, clases, fecha, "Repaso Guía 2");
+    case 4:
+      crearFila(tabla, clases, fecha, "Inicio Guía 2.1");
+      break;
+    case 7:
+      crearFila(tabla, clases, fecha, "Inicio Guía 2.2");
+      break;
+    case 12:
+      crearFila(tabla, clases, fecha, "Inicio Guía 3");
       break;
     case 17:
-      crearFila(tabla, clases, fecha, "Repaso Guía 3");
-      break;
-    case 26:
-      crearFila(tabla, clases, fecha, "Repaso PseInt");
+      crearFila(tabla, clases, fecha, "Inicio Guía 4");
       break;
     case 27:
       crearFila(tabla, clases, fecha, "Integrador PseInt");
@@ -162,6 +168,13 @@ function informeClient(clases, fecha) {
 }
 
 function informeResumido(clases, fecha) {
+  let today = new Date();
+  if (today.getDate() == fecha.getDate()) {
+    document.getElementById("estado").textContent = "";
+    document.getElementById("estado").textContent = estadoActual(clases, fecha);
+  }
+
+
   if (clases == 27) {
     document.getElementById(
       "informeResumido"
@@ -174,3 +187,39 @@ function informeResumido(clases, fecha) {
     document.getElementById("dateFinal").style.padding = "0px 0px 7px 0px";
   }
 }
+
+function estadoActual(clases, fecha) {
+
+  let guia;
+  let dia;
+console.log(clases);
+  
+    if (clases == 1) {
+      guia = "de OnBoarding";
+      dia = "";
+    } else if (clases >= 2 && clases <= 3) {
+      guia = "de la Guía 1";
+      dia = clases - 2 + 1;
+    } else if (clases >= 4 && clases <= 6) {
+      guia = "de la Guía 2.1";
+      dia = clases - 4 + 1;
+    } else if (clases >= 7 && clases <= 11) {
+      guia = "de la Guía 2.2";
+      dia = clases - 7 + 1;
+    } else if (clases >= 12 && clases <= 17) {
+      guia = "de la Guía 3";
+      dia = clases - 12 + 1;
+    } else if (clases >= 18 && clases <= 26) {
+      guia = "de la Guía 4";
+      dia = clases - 18 + 1;
+    }
+
+    if (clases == 27) {
+      return "";
+    }else{
+      return `Estás en tu día ${dia} ${guia}`;
+    }
+  
+  
+}
+
